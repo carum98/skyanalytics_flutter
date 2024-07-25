@@ -39,8 +39,15 @@ class SkyAnalytics {
 
       final uri = Uri.parse(host).replace(path: '/send');
 
+      String operatingSystem = Platform.operatingSystem;
+      String operatingSystemVersion = Platform.operatingSystemVersion;
+
+      final userAgent =
+          '($operatingSystem $operatingSystemVersion) ${client.userAgent}';
+
       HttpClientRequest request = await client.postUrl(uri);
 
+      request.headers.set('User-Agent', userAgent);
       request.headers.set('Content-Type', 'application/json');
       request.headers.set('X-SkyAnalytics-Key', sourceKey);
 
