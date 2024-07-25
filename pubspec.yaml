@@ -1,0 +1,17 @@
+name: 'skyanalytics_flutter'
+description: 'SkyAnalytics Flutter is an adapter for [SkyAnalytics]'
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.0.0
+  flutter: ^3.19.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+
+flutter:
